@@ -116,7 +116,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 50%;
-  margin-right: 60px;
+  margin-right: 70px;
 }
 
 .form label {
@@ -134,39 +134,60 @@ body {
   border: 1px solid rgb(219, 219, 219);
   border-radius: 2px;
   height: 25px;
+  width: 230px;
   padding: 0px 8px;
   transition: all 0.5s ease-in-out;
 }
 
-.form #message {
+.form #message,
+.form #password_rules {
   margin-top: 8px;
-  color: rgb(95, 95, 95);
   font-size: 0.9rem;
-  color: white;
+  color: rgb(94, 94, 94);
 }
 
 :focus {
   outline: 0;
 }
 
-.form input:invalid {
+.form-field-validation:invalid {
   border: 1px solid #b92326;
   background-color: rgba(185, 35, 38, 0.25);
 }
 
-.form input:focus:invalid {
+.form-field-validation:focus:invalid {
   background-color: transparent;
   border: 1px solid #b92326;
 }
 
-.form input:valid {
+.form-field-validation:valid {
   border: 1px solid #8bc34a;
   background-color: rgba(139, 195, 74, 0.25);
 }
 
-.form input:focus:valid {
+.form-field-validation:focus:valid {
   border: 1px solid #8bc34a;
   background-color: transparent;
+}
+
+.form .password-match:valid {
+  border: 1px solid #8bc34a;
+  background-color: rgba(139, 195, 74, 0.25);
+}
+
+.form .password-match:focus:valid {
+  border: 1px solid #8bc34a;
+  background-color: transparent;
+}
+
+.form .password-not-match {
+  border: 1px solid #b92326;
+  background-color: rgba(185, 35, 38, 0.25);
+}
+
+.form .password-not-match:focus {
+  background-color: transparent;
+  border: 1px solid #b92326;
 }
 
 .form input:placeholder-shown {
